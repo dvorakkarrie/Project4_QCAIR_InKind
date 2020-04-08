@@ -11,6 +11,8 @@ class Volunteer(models.Model):
 
 class Service(models.Model):
     volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE, related_name='services')
+    month = models.IntegerField(null=True)
+    year = models.IntegerField(null=True)
     service_dates = models.CharField(max_length=100, null=True)
     hours_worked = models.IntegerField(null=True)
     description = models.TextField(default='provide description of services performed')
@@ -18,4 +20,4 @@ class Service(models.Model):
     total_value_of_service = models.DecimalField(max_digits=7, decimal_places=2)
 
     def __str__(self):
-        return f"{self.volunteer} - {self.service_dates}"
+        return f"{self.year}-{self.month}: {self.volunteer}"

@@ -7,5 +7,5 @@ def volunteer_list(request):
     return render(request, 'inkind/volunteer_list.html', {'volunteers': volunteers})
 
 def service_list(request):
-    services = Service.objects.order_by('volunteer', 'service_dates')
+    services = Service.objects.order_by('volunteer', 'year', 'month')
     return render(request, 'inkind/service_list.html', {'services': services})
