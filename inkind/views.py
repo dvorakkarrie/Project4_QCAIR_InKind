@@ -21,6 +21,17 @@ def volunteer_create(request):
         form = VolunteerForm()
     return render(request, 'inkind/volunteer_form.html', {'form': form})
 
+def volunteer_edit(request, pk):
+    volunteer = Volunteer.objects.get(pk=pk)
+    if request.method == "POST":
+        form = VolunteerForm(request.POST, instance=volunteer)
+        if form.is_valid():
+            volunteer = form.save()
+            return redirect('volunteer_detail', pk=volunteer.pk)
+    else:
+        form = VolunteerForm(instance=volunteer)
+    return render(request, 'inkind/volunteer_form.html', {'form': form})
+
 def service_list(request):
     services = Service.objects.order_by('volunteer', 'year', 'month')
     return render(request, 'inkind/service_list.html', {'services': services})
@@ -37,4 +48,15 @@ def service_create(request):
             return redirect('service_detail', pk=service.pk)
     else:
         form = ServiceForm()
+    return render(request, 'inkind/service_form.html', {'form': form})
+
+def service_edit(request, pk):
+    service = Service.objects.get(pk=pk)
+    if request.method == "POST":
+        form = ServiceForm(request.POST, instance=service)
+        if form.is_valid():
+            service = form.save()
+            return redirect('service_detail', pk=service.pk)
+    else:
+        form = ServiceForm(instance=service)
     return render(request, 'inkind/service_form.html', {'form': form})

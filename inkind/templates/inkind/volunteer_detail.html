@@ -1,5 +1,7 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h2>{{ volunteer.first_name }} {{volunteer.last_name }}<a href=""> (edit) </a></h2>
+<h2>{{ volunteer.first_name }} {{volunteer.last_name }}
+    <a href="{% url 'volunteer_edit' pk=volunteer.pk %}"> (edit) </a>
+</h2>
 <a href="{{volunteer.email_address}}">{{ volunteer.email_address }}</a>
 <h3>In-Kind Service Contribution Reports</h3>
 <ul>
