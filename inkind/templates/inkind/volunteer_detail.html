@@ -13,4 +13,7 @@
     </li>
     {% endfor %}
 </ul>
+<div>
+  <a href="{% url 'volunteer_delete' pk=volunteer.pk %}">DELETE</a>
+</div>
 {% endblock %}
