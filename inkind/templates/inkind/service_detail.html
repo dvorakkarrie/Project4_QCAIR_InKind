@@ -14,4 +14,7 @@
 </p>
 <h3>In-Kind Service Contribution Description:</h3>
 <p>{{ service.description }}</p>
+<div>
+  <a href="{% url 'service_delete' pk=service.pk %}">DELETE</a>
+</div>
 {% endblock %}

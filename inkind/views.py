@@ -60,3 +60,7 @@ def service_edit(request, pk):
     else:
         form = ServiceForm(instance=service)
     return render(request, 'inkind/service_form.html', {'form': form})
+
+def service_delete(request, pk):
+    Service.objects.get(id=pk).delete()
+    return redirect('service_list')
