@@ -2,7 +2,9 @@
 <ul>
     {% for volunteer in volunteers %}
     <li>
-        <a href="">{{ volunteer.first_name }} {{ volunteer.last_name }}</a>
+        <a href="{% url 'volunteer_detail' pk=volunteer.pk %}">
+            {{ volunteer.first_name }} {{ volunteer.last_name }}
+        </a>
     </li>
     {% endfor %}
 </ul>

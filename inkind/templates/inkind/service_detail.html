@@ -1,0 +1,13 @@
+<h2>{{ service.volunteer }} <a href="">(edit)</a></h2>
+<h3>Contribution report for: {{ service.service_dates }}</h3>
+<p>
+    <div>Fiscal Year: {{ service.year }}</div>
+    <div>Fiscal Month: {{ service.month }}</div>
+</p>
+<p>
+    <div>Total Hours Worked: {{ service.hours_worked }}</div>
+    <div>Hourly Service Rate: ${{ service.hourly_rate }}</div>
+    <div>Total Contribution: ${{ service.total_value_of_service }}<div>
+</p>
+<h3>In-Kind Service Contribution Description:</h3>
+<p>{{ service.description }}</p>
