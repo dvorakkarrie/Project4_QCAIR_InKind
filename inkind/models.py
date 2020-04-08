@@ -10,10 +10,10 @@ class Volunteer(models.Model):
 
 class Service(models.Model):
     volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE, related_name='services')
-    dates = models.CharField(max_length=100, null=True)
-    hours = models.IntegerField(null=True)
+    service_dates = models.CharField(max_length=100, null=True)
+    hours_worked = models.IntegerField(null=True)
     description = models.TextField(default='provide description of services performed')
-    rate = models.DecimalField(max_digits=3, decimal_places=2)
-    total = models.DecimalField(max_digits=5, decimal_places=2)
+    hourly_rate = models.DecimalField(max_digits=5, decimal_places=2)
+    total_value_of_service = models.DecimalField(max_digits=7, decimal_places=2)
 
     
