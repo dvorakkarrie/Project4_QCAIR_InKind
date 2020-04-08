@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <title>QCAIR In-Kind Contribution Application</title>
+        <link rel="stylesheet" href="{% static 'css/inkind.css' %}" />
+    </head>
+    <body>
+        <h1>QCAIR In-Kind Contribution Reporting System</h1>
+        <nav>
+            <a href="/services">Services</a>
+            <a href="/">Volunteers</a>
+        </nav>
+        {% block content %} {% endblock %}            
+    </body>
+</html>

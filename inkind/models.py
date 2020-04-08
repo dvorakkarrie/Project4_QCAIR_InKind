@@ -18,6 +18,6 @@ class Service(models.Model):
     description = models.TextField(default='provide description of services performed')
     hourly_rate = models.DecimalField(max_digits=5, decimal_places=2)
     total_value_of_service = models.DecimalField(max_digits=7, decimal_places=2)
-
+    
     def __str__(self):
         return f"{self.year}-{self.month}: {self.volunteer}"

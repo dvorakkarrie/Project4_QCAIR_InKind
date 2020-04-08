@@ -1,12 +1,14 @@
-<h2>
-    {{ volunteer.first_name }} {{volunteer.last_name }}
-    <a href="">(edit)</a>
-</h2>
-<h4>{{ volunteer.email_address }}</h4>
+{% extends 'inkind/base.html' %} {% block content %}
+<h2>{{ volunteer.first_name }} {{volunteer.last_name }}<a href="">(edit)</a></h2>
+<a href="{{volunteer.email_address}}">{{ volunteer.email_address }}</a>
+<h3>In-Kind Service Contribution Reports</h3>
 <ul>
     {% for service in volunteer.services.all %}
     <li>
-        <a href="">{{service.year}}-{{service.month}}</a>
+        <a href="{% url 'service_detail' pk=service.pk %}">
+            {{service.year}}-{{service.month}}
+        </a>
     </li>
     {% endfor %}
 </ul>
+{% endblock %}

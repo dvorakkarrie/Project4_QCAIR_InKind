@@ -1,3 +1,4 @@
+{% extends 'inkind/base.html' %} {% block content %}
 <h2>{{ service.volunteer }} <a href="">(edit)</a></h2>
 <h3>Contribution report for: {{ service.service_dates }}</h3>
 <p>
@@ -11,3 +12,4 @@
 </p>
 <h3>In-Kind Service Contribution Description:</h3>
 <p>{{ service.description }}</p>
+{% endblock %}
