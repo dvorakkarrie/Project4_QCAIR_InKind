@@ -7,6 +7,7 @@ from .forms import VolunteerForm, ServiceForm
 
 
 # Create your views here.
+@login_required
 def volunteer_list(request):
     volunteers = Volunteer.objects.order_by('last_name', 'first_name')
     return render(request, 'inkind/volunteer_list.html', {'volunteers': volunteers})
@@ -44,6 +45,7 @@ def volunteer_delete(request, pk):
     Volunteer.objects.get(id=pk).delete()
     return redirect('volunteer_list')
 
+@login_required
 def service_list(request):
     services = Service.objects.order_by('volunteer__last_name', 'year', 'month')
     return render(request, 'inkind/service_list.html', {'services': services})
