@@ -1,0 +1,1 @@
+web: gunicorn inkind_project.wsgi
