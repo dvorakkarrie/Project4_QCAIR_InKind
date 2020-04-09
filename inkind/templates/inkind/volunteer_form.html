@@ -1,5 +1,6 @@
 {% extends 'inkind/base.html' %} {% block content %}
 <h2>New/Update Volunteer Form</h2>
+<p class="instructions">Please complete each of the following fields to add/edit a volunteer.</p>
 <form method="POST" class="volunteer-form">
   {% csrf_token %} {{ form.as_p }}
   <input type="submit" class="save btn btn-default"></input>

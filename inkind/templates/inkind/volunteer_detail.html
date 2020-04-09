@@ -1,14 +1,14 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h2>{{ volunteer.first_name }} {{volunteer.last_name }}
+<h3>{{ volunteer.first_name }} {{volunteer.last_name }} - 
+    <span class='email-address'>{{ volunteer.email_address }}</span>
     <a href="{% url 'volunteer_edit' pk=volunteer.pk %}"> (edit) </a>
-</h2>
-<a href="{{volunteer.email_address}}">{{ volunteer.email_address }}</a>
-<h3>In-Kind Service Contribution Reports</h3>
+</h3>
+<h4>Submitted Service Contribution Reports</h4>
 <ul>
     {% for service in volunteer.services.all %}
     <li>
         <a href="{% url 'service_detail' pk=service.pk %}">
-            {{service.year}}-{{service.month}}
+            {{service.service_dates}}
         </a>
     </li>
     {% endfor %}
@@ -16,7 +16,7 @@
 <div class='delete'>
     <a href="{% url 'volunteer_delete' pk=volunteer.pk %}" class='delete'
         onclick="return confirm('Are you sure you want to delete this?')">
-        DELETE
+        Delete
     </a>
 </div>
 {% endblock %}

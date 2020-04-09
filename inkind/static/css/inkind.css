@@ -4,7 +4,6 @@ header {
     background-size: 15%;
     height: 15%;
     margin: 0 auto;
-    padding: 0;
 }
 
 nav a {
@@ -26,89 +25,109 @@ body {
     padding: 1em 1em;
   }
   
-  a,
-  a:visited {
+a,
+a:visited {
     text-decoration: none;
     color: green;
-  }
+}
   
-  a:hover {
+a:hover {
     background-color: #ccc;
-  }
+}
   
-  li {
+li {
     margin: 0.25em;
-  }
+}
   
-  h1 {
-    font: inherit;
-    font-size: 24px;
-    font-weight: 600;
-    color: inherit;
-    letter-spacing: -0.05em;
-    text-decoration: none;
+h1 {
     border-bottom: 1px solid black;
-  }
-  
-  h2 {
-      padding: 2% 0;
-  }
+    font: inherit;
+    font-size: 22px;
+    font-weight: bold;
+}
 
-  h2 > a {
+
+h2 > a {
     font-size: 1.00em;
-  }
+}
   
-  h3 {
-      text-decoration-line: underline;
-  }
-  input {
+h3 {
+    padding: 5% 0 2%;
+}
+
+h4 {
+    text-decoration-line: underline;
+}
+
+input {
+    background: whitesmoke;
+    border: solid 1px black;
     display: block;
+    font-size: 14px;
     margin: 5px 0 20px 0;
     padding: 9px;
-    border: solid 1px black;
     width: 300px;
-    background: whitesmoke;
-  }
+}
   
-  input[type="submit"],
+input[type="submit"],
   a.delete {
-    width: auto;
-    padding: 9px 15px;
     background-color: green;
     border: 0;
-    font-size: 14px;
     color: #ffffff;
-  }
+    font-size: 14px;
+    padding: 9px 15px;
+    width: auto;
+}
 
-  a.delete:hover {
-    color: black;
-  }
-  
-  .artist-photo {
+label {
+    display: block;
     width: 400px;
-  }
+}
+
+textarea {
+    font-size: 14px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+a.delete:hover {
+    color: black;
+}
   
-  span.nationality {
-    font-size: 0.5em;
-  }
+span.description {
+    font-weight: 800;
+    padding: 0 0 10% 0;
+}
+
+p.instructions {
+    color: green;
+}
+
+.artist-photo {
+    width: 400px;
+}
   
-  .user-info {
+span.email-address {
+    color: blue;
+}
+  
+.user-info {
     color: rgb(95, 93, 93);
     float: right;
     padding: 5% 0 0 0;
-  }
+}
   
-  a.fav {
+a.fav {
     text-decoration: none;
     color: red;
-  }
+}
   
-  a.no-fav {
+a.no-fav {
     text-decoration: none;
     color: black;
-  }
+}
   
-  .fav:visited,
-  .no-fav:visited {
+.fav:visited,
+.no-fav:visited {
     text-decoration: none;
-  }
+}

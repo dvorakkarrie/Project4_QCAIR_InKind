@@ -1,8 +1,8 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h2>{{ service.volunteer }} 
+<h3>{{ service.volunteer }} 
     <a href="{% url 'service_edit' pk=service.pk %}"> (edit) </a>
-</h2>
-<h3>Contribution report for: {{ service.service_dates }}</h3>
+</h3>
+<h4>Contribution report for: {{ service.service_dates }}</h4>
 <p>
     <div>Fiscal Year: {{ service.year }}</div>
     <div>Fiscal Month: {{ service.month }}</div>
@@ -12,12 +12,16 @@
     <div>Hourly Service Rate: ${{ service.hourly_rate }}</div>
     <div>Total Contribution: ${{ service.total_value_of_service }}<div>
 </p>
-<h4>In-Kind Service Contribution Description:</h4>
-<p>{{ service.description }}</p>
+<p>
+    <span class="description">
+        Description of services provided: 
+    </span>
+        {{ service.description }}
+</p>
 <div>
     <a href="{% url 'service_delete' pk=service.pk %}" class='delete' 
         onclick="return confirm('Are you sure you want to delete this?')">
-        DELETE
+        Delete
     </a>
 </div>
 {% endblock %}

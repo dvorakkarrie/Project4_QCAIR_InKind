@@ -1,10 +1,10 @@
 # Project_QCAIR_InKind
 
-## Project Description
-This application allows users to add, edit, view, and delete monthly in-kind contribution service reports for QCAIR (Quad City Alliance for Immigrants and Refugees).
+## Overview
+This application allows users to add, edit, view and delete volunteers and/or monthly in-kind contribution service reports for QCAIR, Quad City Alliance for Immigrants and Refugees.  I am currently a volunteer treasurer for this non-profit organization and experience challenges to obtain in-kind contribution reports from our volunteers to include in our financial reports.  
  
 ## Project Links
-- GitHub:
+- GitHub: (https://github.com/dvorakkarrie/Project4_QCAIR_InKind)
 - Heroku:
  
 ## Wireframes

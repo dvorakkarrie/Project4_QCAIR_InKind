@@ -7,20 +7,18 @@
     <body>
         <header>
         <nav class="user-info">
-            {% comment %} <a href="/services">Services</a>
-            <a href="/">Volunteers</a> {% endcomment %}
-            <div class="user-info">
-                {% if user.is_authenticated %} Welcome, {{ user.username }}
+            {% if user.is_authenticated %} Welcome, {{ user.username }}
                 <a href="{% url 'logout' %}">Log out</a>
-                {% else %}
+            {% else %}
                 <a href="{% url 'login' %}">Login</a>
                 <a href="{% url 'signup' %}">Signup</a>
-                {% endif %}
-            </div>
+            {% endif %}
         </nav>
         </header>
+        <div>
+        </div>
         <h1>In-Kind Contribution Reporting System</h1>
-        {% comment %} <h2>Thank you for supporting QCAIR!</h2> {% endcomment %}
+        <p>Thank you for supporting QCAIR!</p>
         <nav>
             <a href="/services">Services</a>
             <a href="/">Volunteers</a>

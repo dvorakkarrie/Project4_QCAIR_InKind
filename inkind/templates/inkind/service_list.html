@@ -1,6 +1,7 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h2><a href="{% url 'service_create' %}">Create New Service Report (+) </a></h2>
-<h3>Volunteer Service Reports Filed:</h3>
+<h3><a href="{% url 'service_create' %}">
+    Create New Service Report (+) </a></h3>
+<h4>Volunteer Service Reports Submitted:</h4>
 <ul>
     {% for service in services %}
     <li>

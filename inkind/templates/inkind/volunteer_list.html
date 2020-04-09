@@ -1,6 +1,6 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h2><a href="{% url 'volunteer_create' %}">Add New Volunteer (+) </a></h2>
-<h3>Current List of Volunteers</h3>
+<h3><a href="{% url 'volunteer_create' %}">Add Volunteer (+) </a></h3>
+<h4>Current Volunteers</h4>
 <ul>
     {% for volunteer in volunteers %}
     <li>

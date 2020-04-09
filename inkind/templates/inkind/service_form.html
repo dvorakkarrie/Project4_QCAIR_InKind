@@ -1,5 +1,6 @@
 {% extends 'inkind/base.html' %} {% block content %}
 <h2>New/Update Service Form</h2>
+<p class="instructions">Please complete each of the following fields to create/update a service contribution report.</p>
 <form method="POST" class="service-form">
   {% csrf_token %} {{ form.as_p }}
   <input type="submit" class="save btn btn-default"></input>
