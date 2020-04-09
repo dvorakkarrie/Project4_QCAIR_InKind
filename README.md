@@ -5,7 +5,7 @@ This application allows users to add, edit, view and delete volunteers and/or mo
  
 ## Project Links
 - GitHub: (https://github.com/dvorakkarrie/Project4_QCAIR_InKind)
-- Heroku:
+- Heroku: (https://qcair-inkind-app.herokuapp.com/)
  
 ## Wireframes
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
@@ -83,13 +83,9 @@ Use this section to list all supporting libraries and their role in the project 
   ## Code Snippet
  
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code.
- 
-```
-    
-```  
-    
-```
     
  
 ## Issues and Resolutions
 Use this section to list of all major issues encountered and their resolution.
+
+#4 - Issue with deploying my application via Heroku
