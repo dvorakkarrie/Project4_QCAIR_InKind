@@ -45,7 +45,7 @@ def volunteer_delete(request, pk):
     return redirect('volunteer_list')
 
 def service_list(request):
-    services = Service.objects.order_by('volunteer', 'year', 'month')
+    services = Service.objects.order_by('volunteer__last_name', 'year', 'month')
     return render(request, 'inkind/service_list.html', {'services': services})
 
 @login_required
