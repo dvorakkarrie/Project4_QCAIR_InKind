@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 gunicorn = "*"
 django-heroku = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.8"
