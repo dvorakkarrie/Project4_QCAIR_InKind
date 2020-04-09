@@ -57,18 +57,19 @@ body {
   }
   
   input[type="submit"],
+
   a.delete {
     width: auto;
     padding: 9px 15px;
-    background-color: gray;
+    background-color: red;
     border: 0;
     font-size: 14px;
     color: #ffffff;
   }
   
-  a.delete {
-    background-color: red;
-  }
+  a.delete:hover {
+    background-color: green;
+  } */
   
   .artist-photo {
     width: 400px;
