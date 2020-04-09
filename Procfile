@@ -1,1 +1,1 @@
-web:gunicorn inkind_project.wsgi
+web: gunicorn inkind_project.wsgi
