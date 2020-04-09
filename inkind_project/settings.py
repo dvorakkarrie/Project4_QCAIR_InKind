@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'inkind',
     'django_extensions',
     'accounts',
-    'social_django', 
+    # 'social_django', 
 ]
 
 MIDDLEWARE = [
