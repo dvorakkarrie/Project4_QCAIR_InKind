@@ -21,6 +21,5 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('inkind.urls')),
-    path('', include('accounts.urls')),
-    url('^oauth/', include('social_django.urls', namespace='social')), 
+    path('', include('accounts.urls')), 
 ]
