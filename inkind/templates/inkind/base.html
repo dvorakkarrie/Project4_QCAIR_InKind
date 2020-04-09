@@ -5,10 +5,10 @@
         <link rel="stylesheet" href="{% static 'css/inkind.css' %}" />
     </head>
     <body>
-        <h1>QCAIR In-Kind Contribution Reporting System</h1>
-        <nav>
-            <a href="/services">Services</a>
-            <a href="/">Volunteers</a>
+        <header>
+        <nav class="user-info">
+            {% comment %} <a href="/services">Services</a>
+            <a href="/">Volunteers</a> {% endcomment %}
             <div class="user-info">
                 {% if user.is_authenticated %} Welcome, {{ user.username }}
                 <a href="{% url 'logout' %}">Log out</a>
@@ -18,6 +18,15 @@
                 {% endif %}
             </div>
         </nav>
-        {% block content %} {% endblock %}            
+        </header>
+        <h1>In-Kind Contribution Reporting System</h1>
+        {% comment %} <h2>Thank you for supporting QCAIR!</h2> {% endcomment %}
+        <nav>
+            <a href="/services">Services</a>
+            <a href="/">Volunteers</a>
+        </nav>
+        <div class='body'>
+        {% block content %} {% endblock %} 
+        </div>           
     </body>
 </html>

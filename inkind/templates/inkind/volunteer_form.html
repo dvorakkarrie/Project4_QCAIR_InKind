@@ -1,7 +1,7 @@
 {% extends 'inkind/base.html' %} {% block content %}
-<h1>New Volunteer</h1>
+<h2>New/Update Volunteer Form</h2>
 <form method="POST" class="volunteer-form">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Save</button>
+  <input type="submit" class="save btn btn-default"></input>
 </form>
 {% endblock %}
