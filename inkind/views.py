@@ -82,3 +82,5 @@ def service_edit(request, pk):
 def service_delete(request, pk):
     Service.objects.get(id=pk).delete()
     return redirect('service_list')
+
+
