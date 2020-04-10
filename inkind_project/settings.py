@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+from dotenv import load_dotenv
 
+from pathlib import Path  # python3 only
+env_path = Path('./.env') / '.dotenv'
+load_dotenv(dotenv_path=env_path)
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -23,6 +27,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '4j+bz79)0l73_ln+o+1hi=fe@3ucxe@yzmf#+*z0hbkv($vxrs'
+SOCIAL_AUTH_GITHUB_KEY = os.getenv("SOCIAL_AUTH_GITHUB_KEY")
+SOCIAL_AUTH_GITHUB_SECRET = os.getenv("SOCIAL_AUTH_GITHUB_SECRET")
+SOCIAL_AUTH_FACEBOOK_KEY = os.getenv("SOCIAL_AUTH_FACEBOOK_KEY")
+SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv("SOCIAL_AUTH_FACEBOOK_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,7 +51,7 @@ INSTALLED_APPS = [
     'inkind',
     'django_extensions',
     'accounts',
-    # 'social_django', 
+    'social_django', 
 ]
 
 MIDDLEWARE = [
@@ -54,7 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'social_django.middleware.SocialAuthExceptionMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'inkind_project.urls'
@@ -70,8 +78,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'social_django.context_processors.backends', 
-                # 'social_django.context_processors.login_redirect', 
+               
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect', 
             ],
         },
     },
@@ -113,9 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    # 'social_core.backends.github.GithubOAuth2',
-    # 'social_core.backends.twitter.TwitterOAuth',
-    # 'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )

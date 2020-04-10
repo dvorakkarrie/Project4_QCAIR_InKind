@@ -5,8 +5,6 @@ from .models import Volunteer, Service
 
 from .forms import VolunteerForm, ServiceForm
 
-
-# Create your views here.
 @login_required
 def volunteer_list(request):
     volunteers = Volunteer.objects.order_by('last_name', 'first_name')

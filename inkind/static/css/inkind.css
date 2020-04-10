@@ -24,7 +24,12 @@ body {
     margin: auto;
     padding: 1em 1em;
   }
-  
+
+a.link {
+    color: blue;
+    text-decoration-line: underline;
+}  
+
 a,
 a:visited {
     text-decoration: none;
@@ -116,7 +121,9 @@ span.email-address {
     float: right;
     padding: 5% 0 0 0;
 }
-  
+
+
+
 a.fav {
     text-decoration: none;
     color: red;
