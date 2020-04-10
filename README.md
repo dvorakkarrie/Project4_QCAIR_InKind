@@ -53,14 +53,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
  
 ## Models
 
+
 | Table Volunteer |
-| --- | :---: |
+| :--- | ---: |
 | first_name | character field |
 | last_name | character field |
 | email_address | character field |
 
 | Table Service |
-| --- | :---: |
+| :--- | ---: |
 | volunteer | foreign key |
 | month | integer |
 | year | integer |
