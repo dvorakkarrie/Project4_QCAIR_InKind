@@ -51,37 +51,24 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 * as a user, I can add/edit an in-kind contribution services report
 * as a user, I can delete an in-kind contribution report
  
-## Components
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
- 
-| Component | Description |
-| --- | :---: | 
-| App | This will make the initial data pull and include Axios and React Router|
-| Home Page | This will display a list of all volunteer names, allow user to add/edit/view volunteer details |
-| Volunteer Details | This will display the details for each volunteer including a function to add/edit their name and email address |
-| Volunteer - Add/Edit | This will allow the user to create/update a volunteer (name and email address) |
-| In-Kind Reports | This will display all the in-kind contribution reports for each volunteer
-| In-Kind Report - Add/Edit | This will allow the user to create/update a in-kind services contribution report |
-| In-Kind Report Details | This will display the details for a selected volunteer's in-kind contribution report |
- 
-## Time Frames
-Time frames are also key in the development cycle.  You have limited time to code all phases of the application (app).  Your estimates can then be used to evalute app possibilities based on time needed and the actual time you have before app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
- 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Creating backend | H | 6hrs| 0hrs | 0hrs |
-| Setting up seed file | H | 4hrs| 0hrs | 0hrs |
-| Creating Frontend | H | 10hrs| 0hrs | 0hrs |
-| Total | H | 20hrs| 0hrs | 0hrs |
- 
-## Additional Libraries
-Use this section to list all supporting libraries and their role in the project such as ReactStrap, D3, etc.
-  - Python
-  - SQL
-  - Django
- 
-  ## Code Snippet
- 
+## Models
+
+| Table Volunteer |
+| first_name | character field |
+| last_name | character field |
+| email_address | character field |
+
+| Table Service |
+| volunteer | foreign key |
+| month | integer |
+| year | integer |
+| service_dates | CharField |
+| hours_worked | integer |
+| description | text area |
+| hourly_rate | decimal field |
+| total_value_of_service | decimal field |
+
+
 ## Issues and Resolutions
 Use this section to list of all major issues encountered and their resolution.
 
