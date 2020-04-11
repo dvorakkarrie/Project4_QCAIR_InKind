@@ -3,6 +3,7 @@
     <span class='email-address'>{{ volunteer.email_address }}</span>
     <a href="{% url 'volunteer_edit' pk=volunteer.pk %}"> (edit) </a>
 </h3>
+<img src="{{volunteer.photo_url}}" alt="" />
 <h4>Submitted Service Contribution Reports</h4>
 <ul>
     {% for service in volunteer.services.all %}

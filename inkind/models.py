@@ -5,7 +5,8 @@ class Volunteer(models.Model):
     first_name = models.CharField(max_length=100, null=True)
     last_name = models.CharField(max_length=100, null=True)
     email_address = models.CharField(default='@gmail.com', max_length=100)
-    
+    photo_url = models.ImageField(upload_to='images/')
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
@@ -18,6 +19,7 @@ class Service(models.Model):
     description = models.TextField(default='provide description of services performed')
     hourly_rate = models.DecimalField(max_digits=5, decimal_places=2)
     total_value_of_service = models.DecimalField(max_digits=7, decimal_places=2)
-    
+    preview_url = models.ImageField(upload_to='images/')
+
     def __str__(self):
         return f"{self.year}-{self.month}: {self.volunteer}"

@@ -95,6 +95,10 @@ textarea {
     white-space: pre-wrap;
 }
 
+img {
+    width: 400px;
+}
+
 a.delete:hover {
     color: black;
 }
@@ -121,8 +125,6 @@ span.email-address {
     float: right;
     padding: 5% 0 0 0;
 }
-
-
 
 a.fav {
     text-decoration: none;
