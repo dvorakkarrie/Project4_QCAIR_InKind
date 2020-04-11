@@ -8,8 +8,25 @@ class VolunteerSerializer(serializers.HyperlinkedModelSerializer):
         read_only=True
     )
 
+    # volunteer_url = serializers.ModelSerializer.serializer_url_field(
+    #     view_name='volunteer_detail'
+    # )
+
+    class Meta:
+        model = Volunteer
+        fields = ('id', 'first_name', 'last_name', 'email_address')
+
 class ServiceSerializer(serializers.HyperlinkedModelSerializer):
     volunteer = serializers.HyperlinkedRelatedField(
         view_name='volunteer_detail',
         read_only=True
     )
+
+    # service_url = serializers.ModelSerializer.serializer_url_field(
+    #     view_name='service_detail'
+    # )
+
+    class Meta:
+        model = Service
+        fields = ('id', 'month', 'year', 'service_dates', 'description', 'hours_worked', 'hourly_rate', 'total_value_of_service', 'volunteer')
+
