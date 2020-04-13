@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Volunteer(models.Model):
+    id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=100, null=True)
     last_name = models.CharField(max_length=100, null=True)
     email_address = models.CharField(default='@gmail.com', max_length=100)
@@ -10,7 +11,9 @@ class Volunteer(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 class Service(models.Model):
-    volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE, related_name='services')
+    id = models.AutoField(primary_key=True)
+    volunteer = models.ForeignKey(Volunteer, on_delete=models.CASCADE, 
+        related_name='services')
     month = models.IntegerField(null=True)
     year = models.IntegerField(null=True)
     service_dates = models.CharField(max_length=100, null=True)

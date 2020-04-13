@@ -10,7 +10,7 @@ from .models import Volunteer, Service
 # Create your views here.
 class VolunteerList(generics.ListCreateAPIView):
     queryset = Volunteer.objects.all()
-    serializer_class = VolunteerSerializer
+    serializer_class = VolunteerSerializer    
 
 class VolunteerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Volunteer.objects.all()
