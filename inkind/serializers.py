@@ -31,12 +31,12 @@ class VolunteerSerializer(serializers.HyperlinkedModelSerializer):
             Service.objects.create(volunteer=volunteer, **service_data)
         return volunteer
 
-    # def update(self, instance, validated_data):
-    #     services_data = validated_data.pop('services')
-    #     Volunteer.objects.filter(id=instance.id).update(**validated_data)
-    #     for service_data in services_data:
-    #         Service.objects.get_or_create(volunteer__id=instance.id, defaults=service_data)
-    #     return instance
+    def update(self, instance, validated_data):
+        services_data = validated_data.pop('services')
+        Volunteer.objects.filter(id=instance.id).update(**validated_data)
+        for service_data in services_data:
+            Service.objects.get_or_create(volunteer__id=instance.id, defaults=service_data)
+        return instance
 
     volunteer_url = serializers.ModelSerializer.serializer_url_field(
         view_name='volunteer_detail'
