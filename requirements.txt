@@ -33,7 +33,7 @@ psycopg2-binary==2.8.5
 ptyprocess==0.6.0
 py-moneyed==0.8.0
 pycparser==2.20
-Pygments==2.6.1
+Pygments==2.7.4
 PyJWT==1.7.1
 pylint==2.4.4
 python-decouple==3.3
